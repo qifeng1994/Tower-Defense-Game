@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoints : MonoBehaviour
+public class Waypoints : MonoBehaviour //为了创建enemy路线而设立检查点
 {
     public static Transform[] points;
 

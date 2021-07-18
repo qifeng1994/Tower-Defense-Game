@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour //这个脚本用于让enemy沿着固定的路线移动
 {
     public float speed = 10f;
 
