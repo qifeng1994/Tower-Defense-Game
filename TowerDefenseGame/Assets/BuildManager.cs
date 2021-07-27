@@ -20,11 +20,12 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject standardTurretPrefab;
+    public GameObject anotherTurretPrefab;
 
-    private void Start()
-    {
-        turretToBuild = standardTurretPrefab;
-    }
+    //private void Start()
+    //{
+    //    turretToBuild = standardTurretPrefab;
+    //}
 
     private GameObject turretToBuild;
 
@@ -32,5 +33,11 @@ public class BuildManager : MonoBehaviour
     public GameObject GetTurretToBuild()
     {
         return turretToBuild; 
+    }
+
+    //一个公开的方法用于给私有变量赋值
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
     }
 }

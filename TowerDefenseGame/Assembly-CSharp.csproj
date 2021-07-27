@@ -57,13 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Waypoints.cs" />
+    <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Turret.cs" />
     <Compile Include="Assets\BuildManager.cs" />
     <Compile Include="Assets\Node.cs" />
     <Compile Include="Assets\WaveSpawner.cs" />
-    <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\Shop.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
