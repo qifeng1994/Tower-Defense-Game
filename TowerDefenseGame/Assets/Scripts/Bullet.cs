@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
 
     public float speed = 70f;
+    public float explosionRadius = 0f;
 
     public void Seek(Transform _target) //希望把一个来自其他类的transform赋值给这里的target
     {
@@ -33,6 +34,7 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World); //位移
+        transform.LookAt(target); //
     }
 
     void HitTarget()
@@ -40,9 +42,31 @@ public class Bullet : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation); //
         Destroy(effectIns, 2f);
 
-        Destroy(target.gameObject);
-
+        if(explosionRadius > 0f) //
+        {
+            Explode();
+        }
+        else
+        {
+            Damage(target);
+        }
         Destroy(gameObject);
     }
 
+    void Explode()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius); //
+        foreach(Collider collider in colliders)
+        {
+            if(collider.tag == "Enemy")
+            {
+                Damage(collider.transform);
+            }
+        }
+    }
+
+    void Damage(Transform enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
 }
