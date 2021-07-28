@@ -1,0 +1,285 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1110; Version 2009; 64bit' Language: 'ja' Physical Memory: 16138 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\2020.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Tower-Defense-Game/TowerDefenseGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63612
+Successfully changed project path to: C:/Tower-Defense-Game/TowerDefenseGame
+C:/Tower-Defense-Game/TowerDefenseGame
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 26.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Tower-Defense-Game/TowerDefenseGame/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics (ID=0x9b41)
+    Vendor:   
+    VRAM:     8069 MB
+    Driver:   27.20.100.9664
+Initialize mono
+Mono path[0] = 'C:/Program Files/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56576
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001769 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 26.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.998 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003490 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.996 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1395 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.3 MB.
+System memory in use after: 70.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1830.
+Total: 2.097800 ms (FindLiveObjects: 0.177600 ms CreateObjectMapping: 0.047800 ms MarkObjects: 1.788000 ms  DeleteObjects: 0.083500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts
+  artifactKey: Guid(53d22621bf0879b4f91ca2a264399c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(53d22621bf0879b4f91ca2a264399c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1362b21e6e364d692b0e14084181a3') in 0.004367 seconds
+  Import took 0.006487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/BuildManager.cs
+  artifactKey: Guid(29b6bd3e78aa764438abfcd516f2b1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuildManager.cs using Guid(29b6bd3e78aa764438abfcd516f2b1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed77b13b600c6b875e5f4d648b3c7e5') in 0.028014 seconds
+  Import took 0.030357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.827347 seconds.
+  path: Assets/CameraController.cs
+  artifactKey: Guid(08ac3b25c1203c84f9f3c8c894e8efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CameraController.cs using Guid(08ac3b25c1203c84f9f3c8c894e8efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b636c26652bc87b3f8191b60f3de26c') in 0.002331 seconds
+  Import took 0.004752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003143 seconds.
+  path: Assets/CameraController.cs
+  artifactKey: Guid(08ac3b25c1203c84f9f3c8c894e8efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CameraController.cs using Guid(08ac3b25c1203c84f9f3c8c894e8efeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b636c26652bc87b3f8191b60f3de26c') in 0.002395 seconds
+  Import took 0.005119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.684271 seconds.
+  path: Assets/Turret.cs
+  artifactKey: Guid(aea898deba2046b48b343a0f1421df39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Turret.cs using Guid(aea898deba2046b48b343a0f1421df39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bdd09428a332ce7ea8347bf6d0f78bf') in 0.002302 seconds
+  Import took 0.004727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001967 seconds.
+  path: Assets/Turret.cs
+  artifactKey: Guid(aea898deba2046b48b343a0f1421df39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Turret.cs using Guid(aea898deba2046b48b343a0f1421df39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bdd09428a332ce7ea8347bf6d0f78bf') in 0.002675 seconds
+  Import took 0.005657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.732587 seconds.
+  path: Assets/Waypoints.cs
+  artifactKey: Guid(6d2b88bbd6842a444a5ff329cd2e5a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Waypoints.cs using Guid(6d2b88bbd6842a444a5ff329cd2e5a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caa657b5ad93a065fb21c9622aba6796') in 0.002193 seconds
+  Import took 0.004540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000958 seconds.
+  path: Assets/Waypoints.cs
+  artifactKey: Guid(6d2b88bbd6842a444a5ff329cd2e5a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Waypoints.cs using Guid(6d2b88bbd6842a444a5ff329cd2e5a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caa657b5ad93a065fb21c9622aba6796') in 0.003182 seconds
+  Import took 0.005762 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003062 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.047 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.2 MB.
+System memory in use after: 70.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1833.
+Total: 2.104400 ms (FindLiveObjects: 0.166500 ms CreateObjectMapping: 0.034400 ms MarkObjects: 1.823200 ms  DeleteObjects: 0.079500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003108 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.977 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.3 MB.
+System memory in use after: 70.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1836.
+Total: 2.086000 ms (FindLiveObjects: 0.168200 ms CreateObjectMapping: 0.042900 ms MarkObjects: 1.819200 ms  DeleteObjects: 0.054800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 154.181454 seconds.
+  path: Assets/tower-defense-assets/README.txt
+  artifactKey: Guid(84d9c148e12dc5c438a1b49799d286a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/README.txt using Guid(84d9c148e12dc5c438a1b49799d286a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9003f5bb50973aa12db50f4a25ed0213') in 0.021055 seconds
+  Import took 0.024075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 229.927657 seconds.
+  path: Assets/Imports/Standard Turret
+  artifactKey: Guid(3710aa6c60b66f640bbdb67b311c1828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Standard Turret using Guid(3710aa6c60b66f640bbdb67b311c1828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4753d10c84cb5c1dca22f957c02b3581') in 0.003832 seconds
+  Import took 0.006641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/Imports/Standard Turret
+  artifactKey: Guid(3710aa6c60b66f640bbdb67b311c1828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Standard Turret using Guid(3710aa6c60b66f640bbdb67b311c1828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4753d10c84cb5c1dca22f957c02b3581') in 0.002893 seconds
+  Import took 0.006055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.083393 seconds.
+  path: Assets/Imports/Missile Launcher
+  artifactKey: Guid(f17a3f3c87203804aba976036759d905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher using Guid(f17a3f3c87203804aba976036759d905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae40072a39a04793c97841a5234e6d84') in 0.004195 seconds
+  Import took 0.007177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000559 seconds.
+  path: Assets/Imports/Missile Launcher
+  artifactKey: Guid(f17a3f3c87203804aba976036759d905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher using Guid(f17a3f3c87203804aba976036759d905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae40072a39a04793c97841a5234e6d84') in 0.002736 seconds
+  Import took 0.005218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 91.918630 seconds.
+  path: Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher Texture.png
+  artifactKey: Guid(945cc99dcaf387146959aae7860b6879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher Texture.png using Guid(945cc99dcaf387146959aae7860b6879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b36697e4bb6132035b6d07a272b1a9') in 0.084134 seconds
+  Import took 0.087048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 125.293763 seconds.
+  path: Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher.blend
+  artifactKey: Guid(1e3e0720bd7c81644b32298006e2b9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher.blend using Guid(1e3e0720bd7c81644b32298006e2b9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b979b9ba4de108c5c513f647d007ac') in 0.159303 seconds
+  Import took 0.161766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.597806 seconds.
+  path: Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher.fbx
+  artifactKey: Guid(bf4d24c8d69bb8347973677d472dab87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher.fbx using Guid(bf4d24c8d69bb8347973677d472dab87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74fa0743f2b16e7c85873c3e38bec0bb') in 0.089206 seconds
+  Import took 0.091656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.947199 seconds.
+  path: Assets/tower-defense-assets/Models/Standard Turret
+  artifactKey: Guid(8e82dd0b6f9424e4a839a422b9f8f473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Standard Turret using Guid(8e82dd0b6f9424e4a839a422b9f8f473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e14491aba82779b37e5ff9e96bc2f5e') in 0.002892 seconds
+  Import took 0.005579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.153556 seconds.
+  path: Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher.blend
+  artifactKey: Guid(1e3e0720bd7c81644b32298006e2b9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher.blend using Guid(1e3e0720bd7c81644b32298006e2b9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cb88fc66e589af8d34af45e70af5f30') in 0.044757 seconds
+  Import took 0.047681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 161.707962 seconds.
+  path: Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher 1.blend
+  artifactKey: Guid(63826c9e88edb634281eb8695cc95b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher 1.blend using Guid(63826c9e88edb634281eb8695cc95b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9348294177b02206644ec8c60f743e72') in 0.041165 seconds
+  Import took 0.043969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.167864 seconds.
+  path: Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher Texture 1.png
+  artifactKey: Guid(c276b4b876f31ba46b891d249bf75e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tower-defense-assets/Models/Missile Launcher/Missile Launcher Texture 1.png using Guid(c276b4b876f31ba46b891d249bf75e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5fb6ef3b3d2e7e17bd4e2feafd37d5') in 0.008223 seconds
+  Import took 0.011111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 181.082406 seconds.
+  path: Assets/Imports/Missile Launcher/Missile Launcher.blend
+  artifactKey: Guid(63826c9e88edb634281eb8695cc95b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Missile Launcher.blend using Guid(63826c9e88edb634281eb8695cc95b25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58d6a239d1dc3b3459942ab52b54f784') in 0.045068 seconds
+  Import took 0.048146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.265073 seconds.
+  path: Assets/Imports/Missile Launcher/Missile Launcher Texture.png
+  artifactKey: Guid(c276b4b876f31ba46b891d249bf75e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Missile Launcher Texture.png using Guid(c276b4b876f31ba46b891d249bf75e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc14c40deb081efec862cc43a5d229c') in 0.007867 seconds
+  Import took 0.011797 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
