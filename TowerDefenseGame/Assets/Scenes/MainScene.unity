@@ -4475,6 +4475,7 @@ GameObject:
   - component: {fileID: 597213171}
   - component: {fileID: 597213170}
   - component: {fileID: 597213172}
+  - component: {fileID: 597213173}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -4526,6 +4527,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 3309994657096131875, guid: 7b5596eb4dd480e4c8dee4a2694efb74, type: 3}
   missileLauncherPrefab: {fileID: 2710232676609267744, guid: 45a910bf4f5d23e4da713fa366efe7f2, type: 3}
+--- !u!114 &597213173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597213169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f1a886e0590146bfe38f40d0b00ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &597324420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6603,7 +6617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchorMin.x
@@ -6611,7 +6625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6651,11 +6665,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 741.75
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6675,7 +6689,7 @@ PrefabInstance:
       objectReference: {fileID: 941829434}
     - target: {fileID: 6632880508093387653, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387655, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_Name
@@ -7822,6 +7836,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc72414104ace846a7e28dc4c66a016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 3309994657096131875, guid: 7b5596eb4dd480e4c8dee4a2694efb74, type: 3}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 2710232676609267744, guid: 45a910bf4f5d23e4da713fa366efe7f2, type: 3}
+    cost: 250
 --- !u!1001 &942273900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16569,7 +16589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchorMin.x
@@ -16577,7 +16597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -16617,11 +16637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 247.25
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16639,6 +16659,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 941829434}
+    - target: {fileID: 6632880508093387653, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandardTurret
+      objectReference: {fileID: 0}
     - target: {fileID: 6632880508093387655, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
       propertyPath: m_Name
       value: StandardTurretItem

@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    //
+    public TurretBlueprint standardTurret;
+    public TurretBlueprint missileLauncher;
+
     BuildManager buildManager; //来自BuildManager类的变量
 
     private void Start()
     {
         buildManager = BuildManager.instance; //变量实例化
     }
-    public void PurchaseStandardTurret() //当按图标时触发事件，为接下来要部署的turret赋值
+    public void SelectStandardTurret() //当按图标时触发事件，调用该函数
     {
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SelectTurretToBuild(standardTurret);
     }
 
-    public void PurchaseMissileLauncher()
+    public void SelectMissileLauncher() //当按图标时触发事件，调用该函数
     {
-        buildManager.SetTurretToBuild(buildManager.missileLauncherPrefab);
+        buildManager.SelectTurretToBuild(missileLauncher);
     }
 }

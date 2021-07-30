@@ -8,7 +8,9 @@ public class Node : MonoBehaviour
     public Color hoverColor;
     public Vector3 positionOffset; //在node部署的turret默认位置是node的中心，为了能移动到表面，需要定义一个偏移
 
-    private GameObject turret;
+    [Header("Optional")]
+    public GameObject turret;
+
     private Renderer rend;
     private Color startColor;
 
@@ -27,8 +29,9 @@ public class Node : MonoBehaviour
         //当turret图标覆盖在node上面，鼠标无法点击图标下一层的node
         if (EventSystem.current.IsPointerOverGameObject())
             return;
+
         //当玩家没有选择turret图标时，不变色
-        if (buildManager.GetTurretToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
 
         rend.material.color = hoverColor;
@@ -47,7 +50,7 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
         //当玩家没有选择turret图标时，buildmanger脚本无法获得变量，因此即使鼠标点击部署，也不会有反应
-        if (buildManager.GetTurretToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
 
         if(turret != null)
@@ -57,7 +60,15 @@ public class Node : MonoBehaviour
         }
 
         //获得在buildmanager脚本中的turret对象,并将其实例化
-        GameObject turretToBuild = buildManager.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        //GameObject turretToBuild = buildManager.GetTurretToBuild();
+        //turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        buildManager.BuildTurretOn(this); //
+    }
+
+    //turret放置的位置是node的中心加上偏移
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
     }
 }
