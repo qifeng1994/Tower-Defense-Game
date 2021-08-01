@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Assets\Scripts\TurretBlueprint.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
-    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\MoneyUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\tower-defense-assets\README.txt" />

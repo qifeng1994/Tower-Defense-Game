@@ -23,7 +23,11 @@ public class WaveSpawner : MonoBehaviour //每5秒出现一波敌人，每波敌
 
         countdown -= Time.deltaTime;
 
-        waveCountdownText.text = Mathf.Round(countdown).ToString(); //倒计时的数字取整并转换成字符串赋值给UI
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        //waveCountdownText.text = Mathf.Round(countdown).ToString(); //倒计时的数字取整并转换成字符串赋值给UI
+
+        waveCountdownText.text = string.Format("{0:00.00}", countdown); //{0:00.00}的写法有什么依据
     }
 
     IEnumerator SpawnWave() //协同程序

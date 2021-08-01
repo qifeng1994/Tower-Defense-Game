@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    public Color notEnoughMoneyColor;
     public Vector3 positionOffset; //在node部署的turret默认位置是node的中心，为了能移动到表面，需要定义一个偏移
 
     [Header("Optional")]
@@ -34,7 +35,14 @@ public class Node : MonoBehaviour
         if (!buildManager.CanBuild)
             return;
 
-        rend.material.color = hoverColor;
+        if(buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
     }
 
     //当鼠标离开node时，变为初始颜色

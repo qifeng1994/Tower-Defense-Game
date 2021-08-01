@@ -48,6 +48,7 @@ public class BuildManager : MonoBehaviour
     }
 
     public bool CanBuild { get { return turretToBuild != null; } } //属性为只读
+    public bool HasMoney { get { return PlayerStatus.Money >= turretToBuild.cost; } }
 
     //
     public void BuildTurretOn(Node node)
