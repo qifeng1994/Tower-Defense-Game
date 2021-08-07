@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
     //
     public TurretBlueprint standardTurret;
     public TurretBlueprint missileLauncher;
+    public TurretBlueprint leaserBeamer;
 
     BuildManager buildManager; //来自BuildManager类的变量
 
@@ -22,5 +23,10 @@ public class Shop : MonoBehaviour
     public void SelectMissileLauncher() //当按图标时触发事件，调用该函数
     {
         buildManager.SelectTurretToBuild(missileLauncher);
+    }
+
+    public void SelectLeaserBeamer() //当按图标时触发事件，调用该函数
+    {
+        buildManager.SelectTurretToBuild(leaserBeamer);
     }
 }
