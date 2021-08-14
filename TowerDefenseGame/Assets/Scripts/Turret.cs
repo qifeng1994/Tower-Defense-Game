@@ -5,6 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    private Enemy targetEnemy; //laser击中目标，为了调用enemy类中的方法
 
     [Header("General")]
     public float range = 15f; //炮台的锁敌范围
@@ -16,6 +17,8 @@ public class Turret : MonoBehaviour
 
     [Header("Use Laser")]
     public bool useLaser = false;
+    public int damageOverTime = 30; //laser每秒造成的伤害
+    public float slowAmount = .5f; //laser让enemy减速一半
     public LineRenderer lineRenderer; //
 
     [Header("Unity Setup Fields")]
@@ -27,7 +30,7 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f); //0秒后调用函数，之后每0.5秒调用一次
+        InvokeRepeating("UpdateTarget", 0f, 0.5f); //0秒后调用函数，之后每0.5秒调用一次 是协同程序吗？？
     }
 
     void UpdateTarget() //
@@ -49,6 +52,7 @@ public class Turret : MonoBehaviour
         if(nearestEnemy!=null&&shortestDistance<=range) //如果最近的enemy在锁敌范围内，则把enemy赋值给target
         {
             target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>(); //为了调用enemy类中的方法
         }
         else
         {
@@ -115,6 +119,9 @@ public class Turret : MonoBehaviour
 
     void Laser()
     {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime); //laser每秒对enemy造成伤害
+        targetEnemy.Slow(slowAmount); //laser能让enemy减速
+
         if (!lineRenderer.enabled)
             lineRenderer.enabled = true;
 
