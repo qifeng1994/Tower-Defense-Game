@@ -57,19 +57,21 @@ public class Node : MonoBehaviour
         //当turret图标覆盖在node上面，鼠标无法点击图标下一层的node
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        //当玩家没有选择turret图标时，buildmanger脚本无法获得变量，因此即使鼠标点击部署，也不会有反应
-        if (!buildManager.CanBuild)
-            return;
 
-        if(turret != null)
+
+        if(turret != null) //当node上已经有炮塔时，把当前node的值返回
         {
-            Debug.Log("Can't build there!");
+            buildManager.SelectNode(this);
             return;
         }
 
         //获得在buildmanager脚本中的turret对象,并将其实例化
         //GameObject turretToBuild = buildManager.GetTurretToBuild();
         //turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        //当玩家没有选择turret图标时，buildmanger脚本无法获得变量，因此即使鼠标点击部署，也不会有反应
+        if (!buildManager.CanBuild)
+            return;
 
         buildManager.BuildTurretOn(this); //
     }

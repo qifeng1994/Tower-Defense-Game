@@ -28,6 +28,8 @@ public class BuildManager : MonoBehaviour
     //}
 
     private TurretBlueprint turretToBuild;
+    private Node selectedNode;
+    public NodeUI nodeUI; //当node上面有炮塔时，再次点击node会弹出nodeUI
 
     //一个公开的方法，可以在其他脚本中调用，用于获取私有变量
     //public GameObject GetTurretToBuild()
@@ -45,6 +47,28 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+
+        DeselectNode();
+    }
+
+    public void SelectNode(Node node) //
+    {
+        if(selectedNode == node) //再次点击，隐藏UI
+        {
+            DeselectNode();
+            return;
+        }
+
+        selectedNode = node;
+        turretToBuild = null;
+
+        nodeUI.SetTarget(node);
+    }
+
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
     }
 
     public bool CanBuild { get { return turretToBuild != null; } } //属性为只读
