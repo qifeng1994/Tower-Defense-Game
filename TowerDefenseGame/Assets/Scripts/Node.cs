@@ -9,8 +9,12 @@ public class Node : MonoBehaviour
     public Color notEnoughMoneyColor;
     public Vector3 positionOffset; //在node部署的turret默认位置是node的中心，为了能移动到表面，需要定义一个偏移
 
-    [Header("Optional")]
+    [HideInInspector]
     public GameObject turret;
+    [HideInInspector]
+    public TurretBlueprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
 
     private Renderer rend;
     private Color startColor;
@@ -22,6 +26,24 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color; //脚本加载时先获取node的renderer组件，然后把颜色作为初始颜色
         buildManager = BuildManager.instance;
+    }
+
+    void BuildTurret(TurretBlueprint blueprint)
+    {
+        if (PlayerStatus.Money < blueprint.cost)
+        {
+            Debug.Log("not enough money to build");
+            return;
+        }
+
+        PlayerStatus.Money -= blueprint.cost; //
+
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity); //transform.rotation的区别是什么？
+        turret = _turret;
+
+        turretBlueprint = blueprint;
+
+        // Debug.Log("turret build, money left:" + PlayerStatus.Money); 
     }
 
     //当鼠标放在node上面时，变色
@@ -73,12 +95,32 @@ public class Node : MonoBehaviour
         if (!buildManager.CanBuild)
             return;
 
-        buildManager.BuildTurretOn(this); //
+        //如果以上情况都不满足，则说明这个node在点击后可以实例化一个turret
+        //buildManager.BuildTurretOn(this); 
+        BuildTurret(buildManager.GetTurretToBuild());
     }
 
     //turret放置的位置是node的中心加上偏移
     public Vector3 GetBuildPosition()
     {
         return transform.position + positionOffset;
+    }
+
+    public void UpgradeTurret()
+    {
+        if (PlayerStatus.Money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("not enough money to upgrade");
+            return;
+        }
+
+        PlayerStatus.Money -= turretBlueprint.upgradeCost;
+
+        Destroy(turret); //get rid of the old turret and build a new one
+
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity); //transform.rotation的区别是什么？
+        turret = _turret;
+
+        isUpgraded = true;
     }
 }

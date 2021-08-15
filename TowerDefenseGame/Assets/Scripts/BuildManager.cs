@@ -7,8 +7,6 @@ public class BuildManager : MonoBehaviour
     //single partern 单例模式 ???
     public static BuildManager instance;
 
-    
-
     private void Awake()
     {
         if(instance != null)
@@ -75,20 +73,24 @@ public class BuildManager : MonoBehaviour
     public bool HasMoney { get { return PlayerStatus.Money >= turretToBuild.cost; } }
 
     //
-    public void BuildTurretOn(Node node)
+//    public void BuildTurretOn(Node node)
+//    {
+//        //
+//        if(PlayerStatus.Money < turretToBuild.cost)
+//        {
+//            Debug.Log("not enough money to build");
+//            return;
+//        }
+
+//        PlayerStatus.Money -= turretToBuild.cost; //
+
+//       GameObject turret = (GameObject) Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity); //transform.rotation的区别是什么？
+//        node.turret = turret;
+
+//        Debug.Log("turret build, money left:" + PlayerStatus.Money); //
+//    }
+    public TurretBlueprint GetTurretToBuild()
     {
-        //
-        if(PlayerStatus.Money < turretToBuild.cost)
-        {
-            Debug.Log("not enough money to build");
-            return;
-        }
-
-        PlayerStatus.Money -= turretToBuild.cost; //
-
-       GameObject turret = (GameObject) Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity); //transform.rotation的区别是什么？
-        node.turret = turret;
-
-        Debug.Log("turret build, money left:" + PlayerStatus.Money); //
+        return turretToBuild;
     }
 }
