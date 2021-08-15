@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour //每5秒出现一波敌人，每波敌
     IEnumerator SpawnWave() //协同程序
     {
         waveIndex++;
+        PlayerStatus.Rounds++; //用于记录玩家的回合数
 
         for (int i = 0; i < waveIndex; i++)
         {

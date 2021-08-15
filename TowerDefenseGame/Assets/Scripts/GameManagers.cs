@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class GameManagers : MonoBehaviour //用于管理游戏的开始结束保存等等
 {
-    private bool gameEnded = false;
+    public static bool GameIsOver;
+
+    public GameObject gameOverUI;
+
+    private void Start()
+    {
+        GameIsOver = false;
+    }
     private void Update()
     {
-        if (gameEnded)
+        if (GameIsOver)
             return;
 
         if(PlayerStatus.Lives <= 0)
@@ -18,7 +25,8 @@ public class GameManagers : MonoBehaviour //用于管理游戏的开始结束保
 
     void EndGame()
     {
-        gameEnded = true;
+        GameIsOver = true;
+        gameOverUI.SetActive(true); //激活游戏结束的界面
         Debug.Log("Game Over.");
     }
 }

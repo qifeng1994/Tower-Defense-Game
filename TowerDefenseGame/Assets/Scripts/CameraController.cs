@@ -17,6 +17,11 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        if(GameManagers.GameIsOver) //当游戏结束时，camera停止工作
+        {
+            this.enabled = false;
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Escape)) //Esc作为开关控制镜头是否可以移动
             doMovement = !doMovement;
 
