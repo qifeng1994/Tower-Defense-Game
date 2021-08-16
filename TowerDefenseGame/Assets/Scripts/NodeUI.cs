@@ -8,12 +8,13 @@ public class NodeUI : MonoBehaviour
     public GameObject ui;
 
     public Text upgradeCost;
-
     public Button upgradeButton;
+
+    public Text sellAmount;
 
     private Node target;
 
-    public void SetTarget(Node _target) //
+    public void SetTarget(Node _target) //在buildmanager中被调用
     {
         target = _target;
         transform.position = target.GetBuildPosition();
@@ -28,6 +29,8 @@ public class NodeUI : MonoBehaviour
             upgradeCost.text = "DONE";
             upgradeButton.interactable = false;
         }
+
+        sellAmount.text = "$" + target.turretBlueprint.GetSellAmount(); //
        
         ui.SetActive(true);
     }
@@ -41,5 +44,11 @@ public class NodeUI : MonoBehaviour
     {
         target.UpgradeTurret();
         BuildManager.instance.DeselectNode(); //只取消当前node的UI显示？
+    }
+
+    public void Sell()
+    {
+        target.SellTurret();
+        BuildManager.instance.DeselectNode();
     }
 }

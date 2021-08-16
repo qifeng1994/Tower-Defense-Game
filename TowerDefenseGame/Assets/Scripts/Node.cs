@@ -123,4 +123,11 @@ public class Node : MonoBehaviour
 
         isUpgraded = true;
     }
+
+    public void SellTurret() //
+    {
+        PlayerStatus.Money += turretBlueprint.GetSellAmount();
+        Destroy(turret);
+        turretBlueprint = null;
+    }
 }

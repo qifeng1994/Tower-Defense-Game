@@ -2853,6 +2853,7 @@ MonoBehaviour:
   ui: {fileID: 87331532}
   upgradeCost: {fileID: 854515411}
   upgradeButton: {fileID: 1590477053}
+  sellAmount: {fileID: 2117787837}
 --- !u!224 &325470802 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6632880508093387652, guid: 4bd969a6f8b0e1842ac8c357f6947cf0, type: 3}
@@ -4332,7 +4333,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 500156256}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 319856203}
+        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &500156256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9201,13 +9214,13 @@ MonoBehaviour:
   missileLauncher:
     prefab: {fileID: 2710232676609267744, guid: 45a910bf4f5d23e4da713fa366efe7f2, type: 3}
     cost: 250
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 2710232676609267744, guid: 070c981d583a0bf47a171d98f5ea0bac, type: 3}
+    upgradeCost: 100
   leaserBeamer:
     prefab: {fileID: 695149170739648556, guid: b4f34b9eb7d4f2e4cb767647d9153f12, type: 3}
     cost: 350
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 695149170739648556, guid: 68d993b15b58f4b4787b83d0896bce6d, type: 3}
+    upgradeCost: 150
 --- !u!1001 &942273900
 PrefabInstance:
   m_ObjectHideFlags: 0
