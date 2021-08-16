@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
     public float maxY = 80f;
     public float minY = 10f;
 
-    private bool doMovement = true;
+    //private bool doMovement = true;
 
     private void Update()
     {
@@ -22,11 +22,11 @@ public class CameraController : MonoBehaviour
             this.enabled = false;
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) //Esc作为开关控制镜头是否可以移动
-            doMovement = !doMovement;
+        //if (Input.GetKeyDown(KeyCode.Escape)) //Esc作为开关控制镜头是否可以移动
+        //    doMovement = !doMovement;
 
-        if (!doMovement)
-            return;
+        //if (!doMovement)
+        //    return;
 
         if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
         {
